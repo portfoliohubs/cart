@@ -7,6 +7,8 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "404"]
 whatsapp_phone = "201234567890"
 default_language = "en"
 supported_languages = ["en", "ar"]
+# Set enable_arabic = false to hide Arabic language option completely
+enable_arabic = true
 
 [params.message]
 greeting_en = "Hello,"
@@ -80,7 +82,7 @@ name_en = "Mouth Mirror No. 5"
 name_ar = "مرآة فموية رقم 5"
 description_en = "Front-surface mirror for clear intraoral visibility during examination."
 description_ar = "مرآة أمامية لوضوح الرؤية داخل الفم أثناء الفحص."
-image = "https://github.com/user-attachments/assets/445596d9-ec16-4f5b-beff-4d44e7551fb1"
+image = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NDAiIGhlaWdodD0iNDAwIiB2aWV3Qm94PSIwIDAgNjQwIDQwMCI+PHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0MDAiIGZpbGw9IiNFQUYyRkYiLz48Y2lyY2xlIGN4PSIyNjAiIGN5PSIxNzAiIHI9Ijg4IiBmaWxsPSIjRkZGIiBzdHJva2U9IiMyNjQ2NTMiIHN0cm9rZS13aWR0aD0iMTYiLz48cmVjdCB4PSIzMzAiIHk9IjIxMCIgd2lkdGg9IjE5MCIgaGVpZ2h0PSIyNiIgcng9IjEzIiBmaWxsPSIjMjY0NjUzIi8+PHRleHQgeD0iMzIiIHk9IjM2OCIgc3R5bGU9ImZvbnQtZmFtaWx5OiBBcmlhbCwgc2Fucy1zZXJpZjtmb250LXNpemU6MjRweDtmaWxsOiMyNjQ2NTMiPkRpYWdub3N0aWM8L3RleHQ+PC9zdmc+"
 
 [[params.products]]
 id = "diag-002"
@@ -144,4 +146,3 @@ name_ar = "مرايا تصوير داخل الفم (مجموعة)"
 description_en = "Rhodium-coated mirrors for crisp reflection and color accuracy in photos."
 description_ar = "مرايا مطلية بالروديوم لانعكاس واضح ودقة لون في الصور."
 image = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NDAiIGhlaWdodD0iNDAwIiB2aWV3Qm94PSIwIDAgNjQwIDQwMCI+PHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0MDAiIGZpbGw9IiNGRkVGRjEiLz48Y2lyY2xlIGN4PSIzMDAiIGN5PSIxNzAiIHI9Ijg4IiBmaWxsPSIjRkZGIiBzdHJva2U9IiM4MDAwMjAiIHN0cm9rZS13aWR0aD0iMTYiLz48cGF0aCBkPSJNMzk0IDI0MiBsOTQgNjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzgwMDAyMCIgc3Ryb2tlLXdpZHRoPSIxNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHRleHQgeD0iMzIiIHk9IjM2OCIgc3R5bGU9ImZvbnQtZmFtaWx5OiBBcmlhbCwgc2Fucy1zZXJpZjtmb250LXNpemU6MjRweDtmaWxsOiM4MDAwMjAiPlBob3RvZ3JhcGh5PC90ZXh0Pjwvc3ZnPg=="
-
