@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light" />
   <title>Dental Cart</title>
+  <link id="favicon" rel="icon" type="image/svg+xml" />
+  <meta name="google-site-verification" content="" id="googleSearchConsole" />
   <style>
     :root{
       --bg:#0b1220;
@@ -769,6 +771,20 @@
         document.documentElement.lang = state.lang;
         el("brandText").textContent = t("brand");
         document.title = t("brand");
+
+        // Apply favicon from config
+        const favicon = safeText(state.config?.params?.favicon);
+        if (favicon) {
+          const faviconEl = el("favicon");
+          faviconEl.href = favicon;
+        }
+
+        // Apply Google Search Console verification
+        const gsc = safeText(state.config?.params?.google_search_console);
+        if (gsc) {
+          const gscEl = el("googleSearchConsole");
+          gscEl.content = gsc;
+        }
 
         el("headline").textContent = t("headline");
         el("vpFast").textContent = t("value_fast");
