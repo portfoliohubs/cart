@@ -829,6 +829,20 @@
           ? "تصفح حسب الفئة، أضف المنتجات، أضف ملاحظة لكل منتج، ثم أرسل الطلب عبر واتساب."
           : "Browse by category, add items, add a note per product, then send the order via WhatsApp.";
 
+        // Show/hide Arabic language option based on config
+        const enableArabic = safeText(state.config.params.enable_arabic) === "true";
+        const langPill = el("langEn").parentElement;
+        const langAr = el("langAr");
+        if (enableArabic) {
+          langAr.style.display = "";
+        } else {
+          langAr.style.display = "none";
+          // If Arabic was selected but now disabled, switch to English
+          if (state.lang === "ar") {
+            setLanguage("en");
+          }
+        }
+
         renderCategorySeg();
         renderProducts();
         renderCartDrawer();
