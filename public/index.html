@@ -163,7 +163,6 @@
 
         <div class="pill" role="group" aria-label="Language">
           <button id="langEn" type="button" aria-pressed="true">EN</button>
-          <button id="langAr" type="button" aria-pressed="false">AR</button>
         </div>
       </div>
     </div>
@@ -829,20 +828,6 @@
           ? "تصفح حسب الفئة، أضف المنتجات، أضف ملاحظة لكل منتج، ثم أرسل الطلب عبر واتساب."
           : "Browse by category, add items, add a note per product, then send the order via WhatsApp.";
 
-        // Show/hide Arabic language option based on config
-        const enableArabic = safeText(state.config.params.enable_arabic) === "true";
-        const langPill = el("langEn").parentElement;
-        const langAr = el("langAr");
-        if (enableArabic) {
-          langAr.style.display = "";
-        } else {
-          langAr.style.display = "none";
-          // If Arabic was selected but now disabled, switch to English
-          if (state.lang === "ar") {
-            setLanguage("en");
-          }
-        }
-
         renderCategorySeg();
         renderProducts();
         renderCartDrawer();
@@ -850,10 +835,9 @@
       }
 
       function setLanguage(lang){
-        state.lang = (lang === "ar") ? "ar" : "en";
+        state.lang = "en";
         localStorage.setItem(LANG_KEY, state.lang);
-        el("langEn").setAttribute("aria-pressed", String(state.lang === "en"));
-        el("langAr").setAttribute("aria-pressed", String(state.lang === "ar"));
+        el("langEn").setAttribute("aria-pressed", "true");
         applyLanguage();
       }
 
@@ -879,7 +863,6 @@
         });
 
         el("langEn").addEventListener("click", (e) => { e.stopPropagation(); setLanguage("en"); });
-        el("langAr").addEventListener("click", (e) => { e.stopPropagation(); setLanguage("ar"); });
 
         el("clinicName").addEventListener("input", () => {
           localStorage.setItem(CLINIC_KEY, el("clinicName").value);
@@ -904,7 +887,7 @@
         if (!Array.isArray(state.config.params.products)) state.config.params.products = [];
 
         const defaultLang = safeText(state.config.params.default_language || "en");
-        state.lang = (savedLang === "ar" || savedLang === "en") ? savedLang : (defaultLang === "ar" ? "ar" : "en");
+        state.lang = "en";
 
         state.productsById = new Map();
         for (const p of state.config.params.products) state.productsById.set(safeText(p.id), p);
