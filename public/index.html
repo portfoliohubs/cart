@@ -838,6 +838,8 @@
       function setLanguage(lang){
         state.lang = (lang === "ar") ? "ar" : "en";
         localStorage.setItem(LANG_KEY, state.lang);
+        el("langEn").setAttribute("aria-pressed", String(state.lang === "en"));
+        el("langAr").setAttribute("aria-pressed", String(state.lang === "ar"));
         applyLanguage();
       }
 
@@ -862,8 +864,8 @@
           renderProducts();
         });
 
-        el("langEn").addEventListener("click", () => setLanguage("en"));
-        el("langAr").addEventListener("click", () => setLanguage("ar"));
+        el("langEn").addEventListener("click", (e) => { e.stopPropagation(); setLanguage("en"); });
+        el("langAr").addEventListener("click", (e) => { e.stopPropagation(); setLanguage("ar"); });
 
         el("clinicName").addEventListener("input", () => {
           localStorage.setItem(CLINIC_KEY, el("clinicName").value);
