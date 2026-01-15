@@ -14,7 +14,7 @@ google_search_console = ""
 [params.seo]
 title = "Dental Cart - Order Dental Supplies Online | Fast Delivery"
 description = "Order dental supplies easily with no registration required. Diagnostic, restorative, sterilization, and photography products for dentists. Fast WhatsApp ordering."
-keywords = "dental supplies, dentist equipment, dental products, dental cart, order dental supplies, dental instruments, dental materials, dental clinic supplies, dental consumables, dental diagnostic tools, restorative dental materials, dental sterilization, dental photography equipment"
+main_keywords = "dental supplies, dentist equipment, dental products, dental cart, order dental supplies, dental instruments, dental materials, dental clinic supplies, dental consumables, dental diagnostic tools, restorative dental materials, dental sterilization, dental photography equipment"
 author = "Dental Cart"
 site_url = "https://USERNAME.github.io/REPO/"
 local_business_type = "HealthAndBeautyBusiness"
